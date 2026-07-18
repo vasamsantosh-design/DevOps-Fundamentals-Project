@@ -1,0 +1,150 @@
+ubuntu@ip-172-31-34-9:~/DevOps-Fundamentals-Projec$ sudo journalctl | grep "Failed password"
+Jul 18 16:26:25 ip-172-31-34-9 sudo[3163]: ubuntu : TTY=/dev/pts/0 ; PWD=/home/ubuntu/DevOps-Fundamentals-Projec ; USER=root ; COMMAND=/usr/bin/grep Failed password /var/log/auth.log
+ubuntu@ip-172-31-34-9:~/DevOps-Fundamentals-Projec$ sudo journalctl | grep sshd
+Jul 17 17:43:32 ip-172-31-34-9 systemd[1]: Listening on sshd-unix-local.socket - OpenSSH Server Socket (systemd-ssh-generator, AF_UNIX Local).
+Jul 17 17:43:32 ip-172-31-34-9 systemd[1]: sshd-keygen.service - Generate sshd host keys on first boot skipped, unmet condition check ConditionFirstBoot=yes
+Jul 17 17:43:34 ip-172-31-34-9 sshd[1030]: Server listening on 0.0.0.0 port 22.
+Jul 17 17:43:34 ip-172-31-34-9 sshd[1030]: Server listening on :: port 22.
+Jul 17 18:17:54 ip-172-31-34-9 sshd-session[1265]: Accepted publickey for ubuntu from 13.233.177.5 port 12064 ssh2: ED25519 SHA256:10vww22RtPslrJ9AE1Wf8E6oyi1/A4WUEtjcS7NTqMA
+Jul 17 18:17:54 ip-172-31-34-9 sshd-session[1265]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+Jul 17 18:19:17 ip-172-31-34-9 sshd[1030]: Received signal 15; terminating.
+Jul 17 18:19:38 ip-172-31-34-9 systemd[1]: sshd-keygen.service - Generate sshd host keys on first boot skipped, unmet condition check ConditionFirstBoot=yes
+Jul 17 18:19:39 ip-172-31-34-9 systemd[1]: sshd-keygen.service - Generate sshd host keys on first boot skipped, unmet condition check ConditionFirstBoot=yes
+Jul 17 18:36:27 ip-172-31-34-9 systemd[1]: sshd-keygen.service - Generate sshd host keys on first boot skipped, unmet condition check ConditionFirstBoot=yes
+Jul 17 18:36:27 ip-172-31-34-9 sshd[19973]: Server listening on 0.0.0.0 port 22.
+Jul 17 18:36:27 ip-172-31-34-9 sshd[19973]: Server listening on :: port 22.
+Jul 17 18:36:29 ip-172-31-34-9 sshd-session[19975]: error: maximum authentication attempts exceeded for root from 79.72.57.232 port 56684 ssh2 [preauth]
+Jul 17 18:36:29 ip-172-31-34-9 sshd-session[19975]: Disconnecting authenticating user root 79.72.57.232 port 56684: Too many authentication failures [preauth]
+Jul 17 18:36:31 ip-172-31-34-9 sshd-session[19978]: error: maximum authentication attempts exceeded for root from 79.72.57.232 port 56690 ssh2 [preauth]
+Jul 17 18:36:31 ip-172-31-34-9 sshd-session[19978]: Disconnecting authenticating user root 79.72.57.232 port 56690: Too many authentication failures [preauth]
+Jul 17 18:36:33 ip-172-31-34-9 sshd-session[19980]: error: maximum authentication attempts exceeded for root from 79.72.57.232 port 45040 ssh2 [preauth]
+Jul 17 18:36:33 ip-172-31-34-9 sshd-session[19980]: Disconnecting authenticating user root 79.72.57.232 port 45040: Too many authentication failures [preauth]
+Jul 17 18:36:35 ip-172-31-34-9 sshd-session[19982]: Received disconnect from 79.72.57.232 port 45048:11: disconnected by user [preauth]
+Jul 17 18:36:35 ip-172-31-34-9 sshd-session[19982]: Disconnected from authenticating user root 79.72.57.232 port 45048 [preauth]
+Jul 17 18:36:36 ip-172-31-34-9 sshd-session[19984]: Invalid user admin from 79.72.57.232 port 45064
+Jul 17 18:36:36 ip-172-31-34-9 sshd-session[19984]: error: maximum authentication attempts exceeded for invalid user admin from 79.72.57.232 port 45064 ssh2 [preauth]
+Jul 17 18:36:36 ip-172-31-34-9 sshd-session[19984]: Disconnecting invalid user admin 79.72.57.232 port 45064: Too many authentication failures [preauth]
+Jul 17 18:36:38 ip-172-31-34-9 sshd-session[19986]: Invalid user admin from 79.72.57.232 port 45072
+Jul 17 18:36:39 ip-172-31-34-9 sshd-session[19986]: error: maximum authentication attempts exceeded for invalid user admin from 79.72.57.232 port 45072 ssh2 [preauth]
+Jul 17 18:36:39 ip-172-31-34-9 sshd-session[19986]: Disconnecting invalid user admin 79.72.57.232 port 45072: Too many authentication failures [preauth]
+Jul 17 18:36:40 ip-172-31-34-9 sshd-session[19988]: Invalid user admin from 79.72.57.232 port 45074
+Jul 17 18:36:41 ip-172-31-34-9 sshd-session[19988]: Received disconnect from 79.72.57.232 port 45074:11: disconnected by user [preauth]
+Jul 17 18:36:41 ip-172-31-34-9 sshd-session[19988]: Disconnected from invalid user admin 79.72.57.232 port 45074 [preauth]
+Jul 17 18:36:42 ip-172-31-34-9 sshd-session[19990]: Invalid user oracle from 79.72.57.232 port 45082
+Jul 17 18:36:42 ip-172-31-34-9 sshd-session[19990]: error: maximum authentication attempts exceeded for invalid user oracle from 79.72.57.232 port 45082 ssh2 [preauth]
+Jul 17 18:36:42 ip-172-31-34-9 sshd-session[19990]: Disconnecting invalid user oracle 79.72.57.232 port 45082: Too many authentication failures [preauth]
+Jul 17 18:36:44 ip-172-31-34-9 sshd-session[19992]: Invalid user oracle from 79.72.57.232 port 45174
+Jul 17 18:36:44 ip-172-31-34-9 sshd-session[19992]: error: maximum authentication attempts exceeded for invalid user oracle from 79.72.57.232 port 45174 ssh2 [preauth]
+Jul 17 18:36:44 ip-172-31-34-9 sshd-session[19992]: Disconnecting invalid user oracle 79.72.57.232 port 45174: Too many authentication failures [preauth]
+Jul 17 18:36:46 ip-172-31-34-9 sshd-session[19994]: Invalid user oracle from 79.72.57.232 port 45182
+Jul 17 18:36:46 ip-172-31-34-9 sshd-session[19994]: Received disconnect from 79.72.57.232 port 45182:11: disconnected by user [preauth]
+Jul 17 18:36:46 ip-172-31-34-9 sshd-session[19994]: Disconnected from invalid user oracle 79.72.57.232 port 45182 [preauth]
+Jul 17 18:36:47 ip-172-31-34-9 sshd-session[19996]: Invalid user usuario from 79.72.57.232 port 45190
+Jul 17 18:36:48 ip-172-31-34-9 sshd-session[19996]: error: maximum authentication attempts exceeded for invalid user usuario from 79.72.57.232 port 45190 ssh2 [preauth]
+Jul 17 18:36:48 ip-172-31-34-9 sshd-session[19996]: Disconnecting invalid user usuario 79.72.57.232 port 45190: Too many authentication failures [preauth]
+Jul 17 18:36:49 ip-172-31-34-9 sshd-session[19998]: Invalid user usuario from 79.72.57.232 port 45194
+Jul 17 18:36:50 ip-172-31-34-9 sshd-session[19998]: error: maximum authentication attempts exceeded for invalid user usuario from 79.72.57.232 port 45194 ssh2 [preauth]
+Jul 17 18:36:50 ip-172-31-34-9 sshd-session[19998]: Disconnecting invalid user usuario 79.72.57.232 port 45194: Too many authentication failures [preauth]
+Jul 17 18:36:51 ip-172-31-34-9 sshd-session[20000]: Invalid user usuario from 79.72.57.232 port 45208
+Jul 17 18:36:52 ip-172-31-34-9 sshd-session[20000]: Received disconnect from 79.72.57.232 port 45208:11: disconnected by user [preauth]
+Jul 17 18:36:52 ip-172-31-34-9 sshd-session[20000]: Disconnected from invalid user usuario 79.72.57.232 port 45208 [preauth]
+Jul 17 18:36:53 ip-172-31-34-9 sshd-session[20002]: Invalid user test from 79.72.57.232 port 37864
+Jul 17 18:36:54 ip-172-31-34-9 sshd-session[20002]: error: maximum authentication attempts exceeded for invalid user test from 79.72.57.232 port 37864 ssh2 [preauth]
+Jul 17 18:36:54 ip-172-31-34-9 sshd-session[20002]: Disconnecting invalid user test 79.72.57.232 port 37864: Too many authentication failures [preauth]
+Jul 17 18:36:55 ip-172-31-34-9 sshd-session[20004]: Invalid user test from 79.72.57.232 port 37868
+Jul 17 18:36:56 ip-172-31-34-9 sshd-session[20004]: error: maximum authentication attempts exceeded for invalid user test from 79.72.57.232 port 37868 ssh2 [preauth]
+Jul 17 18:36:56 ip-172-31-34-9 sshd-session[20004]: Disconnecting invalid user test 79.72.57.232 port 37868: Too many authentication failures [preauth]
+Jul 17 18:36:57 ip-172-31-34-9 sshd-session[20008]: Invalid user test from 79.72.57.232 port 37878
+Jul 17 18:36:57 ip-172-31-34-9 sshd-session[20008]: Received disconnect from 79.72.57.232 port 37878:11: disconnected by user [preauth]
+Jul 17 18:36:57 ip-172-31-34-9 sshd-session[20008]: Disconnected from invalid user test 79.72.57.232 port 37878 [preauth]
+Jul 17 18:36:59 ip-172-31-34-9 sshd-session[20010]: Invalid user user from 79.72.57.232 port 37894
+Jul 17 18:37:00 ip-172-31-34-9 sshd-session[20010]: error: maximum authentication attempts exceeded for invalid user user from 79.72.57.232 port 37894 ssh2 [preauth]
+Jul 17 18:37:00 ip-172-31-34-9 sshd-session[20010]: Disconnecting invalid user user 79.72.57.232 port 37894: Too many authentication failures [preauth]
+Jul 17 18:37:01 ip-172-31-34-9 sshd-session[20012]: Invalid user user from 79.72.57.232 port 37896
+Jul 17 18:37:02 ip-172-31-34-9 sshd-session[20012]: error: maximum authentication attempts exceeded for invalid user user from 79.72.57.232 port 37896 ssh2 [preauth]
+Jul 17 18:37:02 ip-172-31-34-9 sshd-session[20012]: Disconnecting invalid user user 79.72.57.232 port 37896: Too many authentication failures [preauth]
+Jul 17 18:37:03 ip-172-31-34-9 sshd-session[20014]: Invalid user user from 79.72.57.232 port 46548
+Jul 17 18:37:04 ip-172-31-34-9 sshd-session[20014]: Received disconnect from 79.72.57.232 port 46548:11: disconnected by user [preauth]
+Jul 17 18:37:04 ip-172-31-34-9 sshd-session[20014]: Disconnected from invalid user user 79.72.57.232 port 46548 [preauth]
+Jul 17 18:37:05 ip-172-31-34-9 sshd-session[20016]: Invalid user ftpuser from 79.72.57.232 port 46558
+Jul 17 18:37:06 ip-172-31-34-9 sshd-session[20016]: error: maximum authentication attempts exceeded for invalid user ftpuser from 79.72.57.232 port 46558 ssh2 [preauth]
+Jul 17 18:37:06 ip-172-31-34-9 sshd-session[20016]: Disconnecting invalid user ftpuser 79.72.57.232 port 46558: Too many authentication failures [preauth]
+Jul 17 18:37:07 ip-172-31-34-9 sshd-session[20027]: Invalid user ftpuser from 79.72.57.232 port 46566
+Jul 17 18:37:08 ip-172-31-34-9 sshd-session[20027]: error: maximum authentication attempts exceeded for invalid user ftpuser from 79.72.57.232 port 46566 ssh2 [preauth]
+Jul 17 18:37:08 ip-172-31-34-9 sshd-session[20027]: Disconnecting invalid user ftpuser 79.72.57.232 port 46566: Too many authentication failures [preauth]
+Jul 17 18:37:09 ip-172-31-34-9 sshd-session[20029]: Invalid user ftpuser from 79.72.57.232 port 46582
+Jul 17 18:37:10 ip-172-31-34-9 sshd-session[20029]: Received disconnect from 79.72.57.232 port 46582:11: disconnected by user [preauth]
+Jul 17 18:37:10 ip-172-31-34-9 sshd-session[20029]: Disconnected from invalid user ftpuser 79.72.57.232 port 46582 [preauth]
+Jul 17 18:37:11 ip-172-31-34-9 sshd-session[20031]: Invalid user test1 from 79.72.57.232 port 46590
+Jul 17 18:37:11 ip-172-31-34-9 sshd-session[20031]: error: maximum authentication attempts exceeded for invalid user test1 from 79.72.57.232 port 46590 ssh2 [preauth]
+Jul 17 18:37:11 ip-172-31-34-9 sshd-session[20031]: Disconnecting invalid user test1 79.72.57.232 port 46590: Too many authentication failures [preauth]
+Jul 17 18:53:55 ip-172-31-34-9 sshd-session[20117]: Connection closed by 198.235.24.65 port 54416
+Jul 17 19:59:49 ip-172-31-34-9 sshd-session[1265]: syslogin_perform_logout: logout() returned an error
+Jul 17 19:59:53 ip-172-31-34-9 sshd-session[1682]: Connection closed by 13.233.177.5 port 12064
+Jul 17 19:59:53 ip-172-31-34-9 sshd-session[1265]: pam_unix(sshd:session): session closed for user ubuntu
+Jul 17 20:00:07 ip-172-31-34-9 sshd[19973]: Received signal 15; terminating.
+Jul 17 20:00:14 ip-172-31-34-9 systemd[1]: sshd-unix-local.socket: Deactivated successfully.
+Jul 17 20:00:14 ip-172-31-34-9 systemd[1]: Closed sshd-unix-local.socket - OpenSSH Server Socket (systemd-ssh-generator, AF_UNIX Local).
+Jul 18 15:09:57 ip-172-31-34-9 systemd[1]: Listening on sshd-unix-local.socket - OpenSSH Server Socket (systemd-ssh-generator, AF_UNIX Local).
+Jul 18 15:09:57 ip-172-31-34-9 systemd[1]: sshd-keygen.service - Generate sshd host keys on first boot skipped, unmet condition check ConditionFirstBoot=yes
+Jul 18 15:09:58 ip-172-31-34-9 sshd[895]: Server listening on 0.0.0.0 port 22.
+Jul 18 15:09:58 ip-172-31-34-9 sshd[895]: Server listening on :: port 22.
+Jul 18 15:12:33 ip-172-31-34-9 sshd-session[1123]: Accepted publickey for ubuntu from 13.233.177.5 port 21565 ssh2: ED25519 SHA256:+FVNJPobUEIVjRtY6c9Ow585VNswgbHfIXyUwvo2kaw
+Jul 18 15:12:33 ip-172-31-34-9 sshd-session[1123]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+Jul 18 15:28:36 ip-172-31-34-9 sshd-session[2225]: AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized_keys root SHA256:hNqVA1xO+FJrhzN5akdmyB958XKLQZr1u42QrLtVjYE failed, status 22
+Jul 18 15:28:37 ip-172-31-34-9 sshd-session[2225]: AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized_keys root SHA256:Ulc7njgaEm//IBe9Tu8zj1rLBYFElAGRisnr1wn0MGk failed, status 22
+Jul 18 15:28:37 ip-172-31-34-9 sshd-session[2225]: AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized_keys root SHA256:u19iwwFoqnpoNPzr2kWc/zSylzPGrvn9Q/FXS9ooI7Y failed, status 22
+Jul 18 15:28:38 ip-172-31-34-9 sshd-session[2225]: AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized_keys root SHA256:bTTDp1jPttrkIBpv4lXv3RTUkjb6U1DsHY3g0w1p3S4 failed, status 22
+Jul 18 15:28:38 ip-172-31-34-9 sshd-session[2225]: Received disconnect from 23.95.20.168 port 47852:11: disconnected by user [preauth]
+Jul 18 15:28:38 ip-172-31-34-9 sshd-session[2225]: Disconnected from authenticating user root 23.95.20.168 port 47852 [preauth]
+Jul 18 16:08:48 ip-172-31-34-9 sshd-session[2820]: AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized_keys root SHA256:wAZBlWWxpYvz7vt3JbYUgL5ieRxT7MqySzR2NavRxzE failed, status 22
+Jul 18 16:08:49 ip-172-31-34-9 sshd-session[2820]: AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized_keys root SHA256:bvV2pi8ZHHUo0f9NCONOBGDQUlCai/uWBmtoKcD3vEs failed, status 22
+Jul 18 16:08:49 ip-172-31-34-9 sshd-session[2820]: AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized_keys root SHA256:5PoTv2zcv0pTrKqPGgIO/q1Q/u8EV9sSZ615V9hUy6o failed, status 22
+Jul 18 16:08:49 ip-172-31-34-9 sshd-session[2820]: AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized_keys root SHA256:oAP8RFJc78cymaTygls6/iyjUycEfcq0J2aXj787E/Q failed, status 22
+Jul 18 16:08:50 ip-172-31-34-9 sshd-session[2820]: Received disconnect from 185.104.71.22 port 36582:11: disconnected by user [preauth]
+Jul 18 16:08:50 ip-172-31-34-9 sshd-session[2820]: Disconnected from authenticating user root 185.104.71.22 port 36582 [preauth]
+Jul 18 16:10:04 ip-172-31-34-9 sshd-session[2945]: Unable to negotiate with 205.210.31.53 port 63246: no matching key exchange method found. Their offer: diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1 [preauth]
+Jul 18 16:26:38 ip-172-31-34-9 sudo[3176]: ubuntu : TTY=/dev/pts/0 ; PWD=/home/ubuntu/DevOps-Fundamentals-Projec ; USER=root ; COMMAND=/usr/bin/grep sshd /var/log/auth.log
+ubuntu@ip-172-31-34-9:~/DevOps-Fundamentals-Projec$ sudo journalctl -p err
+Jul 17 17:43:22 ubuntu kernel: piix4_smbus 0000:00:01.3: SMBus base address uninitialized - upgrade BIOS or use force_addr=0xaddr
+Jul 17 18:36:29 ip-172-31-34-9 sshd-session[19975]: error: maximum authentication attempts exceeded for root from 79.72.57.232 port 5668>
+Jul 17 18:36:31 ip-172-31-34-9 sshd-session[19978]: error: maximum authentication attempts exceeded for root from 79.72.57.232 port 5669>
+Jul 17 18:36:33 ip-172-31-34-9 sshd-session[19980]: error: maximum authentication attempts exceeded for root from 79.72.57.232 port 4504>
+Jul 17 18:36:36 ip-172-31-34-9 sshd-session[19984]: error: maximum authentication attempts exceeded for invalid user admin from 79.72.57>
+Jul 17 18:36:39 ip-172-31-34-9 sshd-session[19986]: error: maximum authentication attempts exceeded for invalid user admin from 79.72.57>
+Jul 17 18:36:42 ip-172-31-34-9 sshd-session[19990]: error: maximum authentication attempts exceeded for invalid user oracle from 79.72.5>
+Jul 17 18:36:44 ip-172-31-34-9 sshd-session[19992]: error: maximum authentication attempts exceeded for invalid user oracle from 79.72.5>
+Jul 17 18:36:48 ip-172-31-34-9 sshd-session[19996]: error: maximum authentication attempts exceeded for invalid user usuario from 79.72.>
+Jul 17 18:36:50 ip-172-31-34-9 sshd-session[19998]: error: maximum authentication attempts exceeded for invalid user usuario from 79.72.>
+Jul 17 18:36:54 ip-172-31-34-9 sshd-session[20002]: error: maximum authentication attempts exceeded for invalid user test from 79.72.57.>
+Jul 17 18:36:56 ip-172-31-34-9 sshd-session[20004]: error: maximum authentication attempts exceeded for invalid user test from 79.72.57.>
+Jul 17 18:37:00 ip-172-31-34-9 sshd-session[20010]: error: maximum authentication attempts exceeded for invalid user user from 79.72.57.>
+Jul 17 18:37:02 ip-172-31-34-9 sshd-session[20012]: error: maximum authentication attempts exceeded for invalid user user from 79.72.57.>
+Jul 17 18:37:06 ip-172-31-34-9 sshd-session[20016]: error: maximum authentication attempts exceeded for invalid user ftpuser from 79.72.>
+Jul 17 18:37:08 ip-172-31-34-9 sshd-session[20027]: error: maximum authentication attempts exceeded for invalid user ftpuser from 79.72.>
+Jul 17 18:37:11 ip-172-31-34-9 sshd-session[20031]: error: maximum authentication attempts exceeded for invalid user test1 from 79.72.57>
+-- Boot d7e568dd0bd742309af895bb2ea081f2 --
+Jul 18 15:09:53 ip-172-31-34-9 kernel: piix4_smbus 0000:00:01.3: SMBus base address uninitialized - upgrade BIOS or use force_addr=0xaddr
+
+ubuntu@ip-172-31-34-9:~/DevOps-Fundamentals-Projec$ sudo journalctl -p warning
+Jul 17 17:43:21 ubuntu kernel: MDS CPU bug present and SMT on, data leak possible. See https://www.kernel.org/doc/html/latest/admin-guid>
+Jul 17 17:43:21 ubuntu kernel: MMIO Stale Data CPU bug present and SMT on, data leak possible. See https://www.kernel.org/doc/html/lates>
+Jul 17 17:43:21 ubuntu kernel: acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended configuration space under this b>
+Jul 17 17:43:21 ubuntu kernel: i8042: Warning: Keylock active
+Jul 17 17:43:21 ubuntu kernel: GPT:Primary header thinks Alt. header is not at the end of the disk.
+Jul 17 17:43:21 ubuntu kernel: GPT:16777215 != 41943039
+Jul 17 17:43:21 ubuntu kernel: GPT:Alternate GPT header not at the end of the disk.
+Jul 17 17:43:21 ubuntu kernel: GPT:16777215 != 41943039
+Jul 17 17:43:21 ubuntu kernel: GPT: Use GNU Parted to correct GPT errors.
+Jul 17 17:43:22 ubuntu kernel: piix4_smbus 0000:00:01.3: SMBus base address uninitialized - upgrade BIOS or use force_addr=0xaddr
+Jul 17 17:43:22 ubuntu kernel: ena 0000:00:05.0: LLQ is not supported Fallback to host mode policy.
+Jul 17 17:43:26 ubuntu kernel: faux_driver regulatory: Direct firmware load for regulatory.db failed with error -2
+Jul 17 17:43:32 ip-172-31-34-9 (acpid)[705]: acpid.service: Referenced but unset environment variable evaluates to an empty string: OPTI>
+Jul 17 17:43:32 ip-172-31-34-9 (cron)[709]: cron.service: Referenced but unset environment variable evaluates to an empty string: EXTRA_>
+Jul 17 17:43:32 ip-172-31-34-9 kernel: kauditd_printk_skb: 172 callbacks suppressed
+Jul 17 17:43:33 ip-172-31-34-9 (irqbalance)[720]: irqbalance.service: Referenced but unset environment variable evaluates to an empty st>
+Jul 17 17:43:33 ip-172-31-34-9 kernel: nvme nvme0: using unchecked data buffer
+Jul 17 18:15:43 ip-172-31-34-9 irqbalance[720]: Cannot change IRQ 26 affinity: Permission denied
+Jul 17 18:15:43 ip-172-31-34-9 irqbalance[720]: IRQ 26 affinity is now unmanaged
+Jul 17 18:17:55 ip-172-31-34-9 kernel: kauditd_printk_skb: 1 callbacks suppressed
+Jul 17 18:20:03 ip-172-31-34-9 irqbalance[720]: Cannot change IRQ 25 affinity: Permission denied
