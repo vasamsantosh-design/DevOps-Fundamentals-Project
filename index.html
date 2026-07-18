@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Fundamentals Project</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #4e54c8);
+            background-size: 400% 400%;
+            animation: gradientBG 12s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .card {
+            width: 600px;
+            padding: 40px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.6rem;
+            color: #FFD700;
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #FFD700;
+            }
+
+            to {
+                text-shadow: 0 0 25px #FFD700,
+                    0 0 40px orange;
+            }
+        }
+
+        h2 {
+            margin: 15px 0;
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        h3 {
+            margin-top: 30px;
+            padding: 12px;
+            background: linear-gradient(90deg, #00dbde, #fc00ff);
+            border-radius: 10px;
+            color: white;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+
+        .highlight {
+            color: #00ffcc;
+            font-weight: bold;
+        }
+
+        .footer {
+            margin-top: 25px;
+            font-size: 14px;
+            color: #ddd;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>🚀 DevOps Fundamentals Project</h1>
+
+        <h2>👨‍🎓 Student Name:
+            <span class="highlight">Santosh Vasam</span>
+        </h2>
+
+        <h2>📚 Batch Code:
+            <span class="highlight">DR501</span>
+        </h2>
+
+        <h2>📅 Date:
+            <span class="highlight">17 July 2026</span>
+        </h2>
+
+        <h3>☁️ Hosted on AWS Ubuntu Server</h3>
+
+        <div class="footer">
+            Powered by HTML • CSS • AWS EC2 • Ubuntu • DevOps
+        </div>
+    </div>
+
+</body>
+
+</html>
