@@ -2,126 +2,1246 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps Fundamentals Project</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Poppins", Arial, sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #4e54c8);
-            background-size: 400% 400%;
-            animation: gradientBG 12s ease infinite;
-        }
+<title>DevOps Fundamentals Dashboard</title>
 
-        @keyframes gradientBG {
-            0% {
-                background-position: 0% 50%;
-            }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-            50% {
-                background-position: 100% 50%;
-            }
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-            100% {
-                background-position: 0% 50%;
-            }
-        }
+<style>
 
-        .card {
-            width: 600px;
-            padding: 40px;
-            text-align: center;
-            background: rgba(255, 255, 255, 0.12);
-            backdrop-filter: blur(12px);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-            color: white;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-        h1 {
-            font-size: 2.6rem;
-            color: #FFD700;
-            margin-bottom: 20px;
-            text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
-            animation: glow 2s ease-in-out infinite alternate;
-        }
+body{
 
-        @keyframes glow {
-            from {
-                text-shadow: 0 0 10px #FFD700;
-            }
 
-            to {
-                text-shadow: 0 0 25px #FFD700,
-                    0 0 40px orange;
-            }
-        }
+background:linear-gradient(-45deg,
+#020617,
+#0f172a,
+#164e63,
+#0891b2);
 
-        h2 {
-            margin: 15px 0;
-            font-weight: 500;
-            color: #ffffff;
-        }
+background-size:400% 400%;
+animation:bg 18s ease infinite;
 
-        h3 {
-            margin-top: 30px;
-            padding: 12px;
-            background: linear-gradient(90deg, #00dbde, #fc00ff);
-            border-radius: 10px;
-            color: white;
-            font-size: 1.2rem;
-            letter-spacing: 1px;
-        }
+color:white;
+overflow-x:hidden;
 
-        .highlight {
-            color: #00ffcc;
-            font-weight: bold;
-        }
 
-        .footer {
-            margin-top: 25px;
-            font-size: 14px;
-            color: #ddd;
-            opacity: 0.9;
-        }
-    </style>
+}
+
+@keyframes bg{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+header{
+
+width:100%;
+padding:25px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+backdrop-filter:blur(20px);
+background:rgba(255,255,255,.08);
+position:sticky;
+top:0;
+z-index:1000;
+
+}
+
+.logo{
+
+font-size:30px;
+font-weight:700;
+
+}
+
+.logo span{
+
+color:#ffd700;
+
+}
+
+nav a{
+
+text-decoration:none;
+color:white;
+margin-left:25px;
+font-weight:500;
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#ffd700;
+
+}
+
+.hero{
+
+padding:70px 60px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:40px;
+flex-wrap:wrap;
+
+}
+
+.hero-left{
+
+flex:1;
+
+}
+
+.hero-left h1{
+
+font-size:55px;
+margin-bottom:20px;
+line-height:1.2;
+
+}
+
+.hero-left p{
+
+font-size:18px;
+line-height:1.8;
+opacity:.9;
+
+}
+
+.hero-right{
+
+flex:1;
+display:flex;
+justify-content:center;
+
+}
+
+.clock-box{
+
+width:350px;
+
+padding:30px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(20px);
+
+text-align:center;
+
+box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+}
+
+.clock{
+
+font-size:55px;
+font-weight:700;
+margin-top:20px;
+
+}
+
+.date{
+
+font-size:20px;
+margin-top:15px;
+
+}
+
+.container{
+
+width:95%;
+max-width:1400px;
+margin:auto;
+
+}
+
+.dashboard{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+padding-bottom:50px;
+
+}
+
+.card{
+
+background:rgba(15,23,42,.75);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:25px;
+
+padding:25px;
+
+backdrop-filter:blur(20px);
+
+transition:.4s;
+
+box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card h2{
+
+margin-bottom:20px;
+font-size:24px;
+
+}
+
+.card p{
+
+line-height:1.8;
+
+}
+
+.icon{
+
+font-size:45px;
+margin-bottom:20px;
+color:#ffd700;
+
+}
+
+.progress{
+
+width:100%;
+height:12px;
+background:rgba(255,255,255,.15);
+border-radius:20px;
+margin-top:20px;
+
+}
+
+.bar{
+
+height:12px;
+border-radius:20px;
+
+}
+
+.aws{width:100%;background:#00d4ff;}
+.ubuntu{width:100%;background:#ff6b00;}
+.apache{width:100%;background:#00ff95;}
+.github{width:100%;background:#ff00cc;}
+.bash{width:100%;background:#00ffea;}
+.logs{width:100%;background:#ffe600;}
+
+.section-title{
+
+font-size:35px;
+margin:60px 0 30px;
+
+text-align:center;
+
+font-weight:700;
+
+}
+
+footer{
+
+margin-top:80px;
+padding:40px;
+text-align:center;
+
+background:rgba(255,255,255,.08);
+
+}
+
+.stat-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+
+margin-top:30px;
+
+}
+
+.stat{
+
+background:rgba(255,255,255,.08);
+
+padding:25px;
+
+border-radius:20px;
+
+text-align:center;
+
+}
+
+.stat h1{
+
+font-size:45px;
+
+margin:15px 0;
+
+color:#ffd700;
+
+}
+
+@media(max-width:900px){
+
+header{
+
+flex-direction:column;
+
+}
+
+.hero{
+
+padding:40px 20px;
+
+}
+
+.hero-left h1{
+
+font-size:38px;
+
+}
+
+.clock{
+
+font-size:40px;
+
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-    <div class="card">
-        <h1>🚀 DevOps Fundamentals Project</h1>
+<header>
 
-        <h2>👨‍🎓 Student Name:
-            <span class="highlight">Santosh Vasam</span>
-        </h2>
+<div class="logo">
 
-        <h2>📚 Batch Code:
-            <span class="highlight">DR501</span>
-        </h2>
+DevOps <span>Dashboard</span>
 
-        <h2>📅 Date:
-            <span class="highlight">17 July 2026</span>
-        </h2>
+</div>
 
-        <h3>☁️ Hosted on AWS Ubuntu Server</h3>
+<nav>
 
-        <div class="footer">
-            Powered by HTML • CSS • AWS EC2 • Ubuntu • DevOps
-        </div>
+<a href="#">Home</a>
+
+<a href="#">AWS</a>
+
+<a href="#">Ubuntu</a>
+
+<a href="#">GitHub</a>
+
+<a href="#">Logs</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-left">
+
+<h1>DevOps Fundamentals Project Dashboard</h1>
+
+<p>
+
+A modern dashboard demonstrating AWS Infrastructure, Ubuntu Server Administration,
+Website Deployment, GitHub Version Control, Bash Automation and Linux Log Monitoring.
+
+</p>
+
+</div>
+
+<div class="hero-right">
+
+<div class="clock-box">
+
+<h2>Current Time</h2>
+
+<div id="clock" class="clock">00:00:00</div>
+
+<div id="date" class="date"></div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- STUDENT INFORMATION -->
+<!-- ========================= -->
+
+<h2 class="section-title">
+    Project Information
+</h2>
+
+<div class="dashboard">
+
+<div class="card">
+
+<i class="fa-solid fa-user-graduate icon"></i>
+
+<h2>Student Details</h2>
+
+<p>
+
+<b>Name :</b> Santosh Vasam
+
+<br><br>
+
+<b>Batch :</b> DR501
+
+<br><br>
+
+<b>Project :</b>
+
+DevOps Fundamentals Project
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-cloud-arrow-up icon"></i>
+
+<h2>Deployment Status</h2>
+
+<p>
+
+AWS EC2
+
+<br>
+
+Ubuntu Server
+
+<br>
+
+Apache2 Running
+
+<br>
+
+Website Live
+
+<br>
+
+GitHub Repository Ready
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-terminal icon"></i>
+
+<h2>Bash Automation</h2>
+
+<p>
+
+✔ health-check.sh
+
+<br>
+
+✔ apache-monitor.sh
+
+<br>
+
+✔ backup.sh
+
+<br>
+
+✔ log-report.txt
+
+</p>
+
+</div>
+
+</div>
+
+<div class="container">
+
+<h2 class="section-title">
+
+Project Modules
+
+</h2>
+
+<div class="dashboard">
+
+<div class="card">
+
+<i class="fa-solid fa-cloud icon"></i>
+
+<h2>AWS Infrastructure</h2>
+
+<p>
+
+✔ Custom VPC<br>
+
+✔ Public Subnet<br>
+
+✔ Internet Gateway<br>
+
+✔ Route Table<br>
+
+✔ Security Group<br>
+
+✔ Ubuntu EC2 Instance
+
+</p>
+
+<div class="progress">
+
+<div class="bar aws"></div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<i class="fa-brands fa-ubuntu icon"></i>
+
+<h2>Ubuntu Server</h2>
+
+<p>
+
+✔ Update System<br>
+
+✔ Upgrade Packages<br>
+
+✔ Install Git<br>
+
+✔ Apache2<br>
+
+✔ Curl<br>
+
+✔ Vim
+
+</p>
+
+<div class="progress">
+
+<div class="bar ubuntu"></div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-globe icon"></i>
+
+<h2>Website Deployment</h2>
+
+<p>
+
+✔ HTML Dashboard<br>
+
+✔ Apache Hosting<br>
+
+✔ Public IP Access<br>
+
+✔ Responsive Design
+
+</p>
+
+<div class="progress">
+
+<div class="bar apache"></div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<i class="fa-brands fa-github icon"></i>
+
+<h2>Git & GitHub</h2>
+
+<p>
+
+✔ Repository<br>
+
+✔ Git Init<br>
+
+✔ Branches<br>
+
+✔ Merge<br>
+
+✔ Push to GitHub
+
+</p>
+
+<div class="progress">
+
+<div class="bar github"></div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-terminal icon"></i>
+
+<h2>Bash Scripts</h2>
+
+<p>
+
+✔ Health Check<br>
+
+✔ Apache Monitor<br>
+
+✔ Website Backup
+
+</p>
+
+<div class="progress">
+
+<div class="bar bash"></div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-file-lines icon"></i>
+
+<h2>Log Monitoring</h2>
+
+<p>
+
+✔ Failed Logins<br>
+
+✔ SSH Activity<br>
+
+✔ System Errors<br>
+
+✔ Warning Messages
+
+</p>
+
+<div class="progress">
+
+<div class="bar logs"></div>
+
+</div>
+
+</div>
+
+</div>
+<!-- ========================= -->
+<!-- PROJECT STATISTICS -->
+<!-- ========================= -->
+
+<h2 class="section-title">
+    Live Project Statistics
+</h2>
+
+<div class="stat-grid">
+
+    <div class="stat">
+        <i class="fa-solid fa-server icon"></i>
+        <h1 class="counter" data-target="7">0</h1>
+        <p>Tasks Completed</p>
     </div>
+
+    <div class="stat">
+        <i class="fa-solid fa-code-branch icon"></i>
+        <h1 class="counter" data-target="18">0</h1>
+        <p>Linux Commands Used</p>
+    </div>
+
+    <div class="stat">
+        <i class="fa-brands fa-github icon"></i>
+        <h1 class="counter" data-target="12">0</h1>
+        <p>Git Operations</p>
+    </div>
+
+    <div class="stat">
+        <i class="fa-solid fa-shield-halved icon"></i>
+        <h1 class="counter" data-target="100">0</h1>
+        <p>Project Completion %</p>
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- SERVER HEALTH -->
+<!-- ========================= -->
+
+<h2 class="section-title">
+    Server Health Monitor
+</h2>
+
+<div class="dashboard">
+
+    <div class="card">
+
+        <i class="fa-solid fa-microchip icon"></i>
+
+        <h2>CPU Status</h2>
+
+        <p>
+            Processor Load
+        </p>
+
+        <h2 style="margin-top:20px;color:#00ffae;">
+            Excellent
+        </h2>
+
+        <div class="progress">
+            <div class="bar aws" style="width:75%;"></div>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <i class="fa-solid fa-memory icon"></i>
+
+        <h2>Memory Usage</h2>
+
+        <p>
+            RAM Consumption
+        </p>
+
+        <h2 style="margin-top:20px;color:#ffd700;">
+            65%
+        </h2>
+
+        <div class="progress">
+            <div class="bar ubuntu" style="width:65%;"></div>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <i class="fa-solid fa-hard-drive icon"></i>
+
+        <h2>Disk Space</h2>
+
+        <p>
+
+            Storage Utilization
+
+        </p>
+
+        <h2 style="margin-top:20px;color:#00d4ff;">
+            59%
+        </h2>
+
+        <div class="progress">
+            <div class="bar apache" style="width:59%;"></div>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <i class="fa-solid fa-users icon"></i>
+
+        <h2>Logged Users</h2>
+
+        <p>
+
+            Active SSH Users
+
+        </p>
+
+        <h2 style="margin-top:20px;color:#ff8c42;">
+            1 User
+        </h2>
+
+        <div class="progress">
+            <div class="bar github" style="width:20%;"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ====================================================== -->
+<!-- PROJECT SKILLS -->
+<!-- ====================================================== -->
+
+<h2 class="section-title">Skills Demonstrated</h2>
+
+<div class="dashboard">
+
+<div class="card">
+
+<h2><i class="fa-solid fa-cloud icon"></i>AWS Cloud</h2>
+
+<p>Infrastructure Deployment</p>
+
+<div class="progress">
+<div class="bar aws" style="width:95%"></div>
+</div>
+
+<p style="margin-top:10px;">95%</p>
+
+</div>
+
+<div class="card">
+
+<h2><i class="fa-brands fa-linux icon"></i>Linux</h2>
+
+<p>Ubuntu Administration</p>
+
+<div class="progress">
+<div class="bar ubuntu" style="width:90%"></div>
+</div>
+
+<p style="margin-top:10px;">90%</p>
+
+</div>
+
+<div class="card">
+
+<h2><i class="fa-solid fa-code icon"></i>HTML/CSS</h2>
+
+<p>Dashboard Development</p>
+
+<div class="progress">
+<div class="bar apache" style="width:92%"></div>
+</div>
+
+<p style="margin-top:10px;">92%</p>
+
+</div>
+
+<div class="card">
+
+<h2><i class="fa-brands fa-github icon"></i>Git & GitHub</h2>
+
+<p>Version Control</p>
+
+<div class="progress">
+<div class="bar github" style="width:88%"></div>
+</div>
+
+<p style="margin-top:10px;">88%</p>
+
+</div>
+
+<div class="card">
+
+<h2><i class="fa-solid fa-terminal icon"></i>Bash</h2>
+
+<p>Automation Scripts</p>
+
+<div class="progress">
+<div class="bar bash" style="width:85%"></div>
+</div>
+
+<p style="margin-top:10px;">85%</p>
+
+</div>
+
+<div class="card">
+
+<h2><i class="fa-solid fa-file-lines icon"></i>Monitoring</h2>
+
+<p>Log Analysis</p>
+
+<div class="progress">
+<div class="bar logs" style="width:94%"></div>
+</div>
+
+<p style="margin-top:10px;">94%</p>
+
+</div>
+
+</div>
+
+<!-- ====================================================== -->
+<!-- ACHIEVEMENTS -->
+<!-- ====================================================== -->
+
+<h2 class="section-title">Project Achievements</h2>
+
+<div class="dashboard">
+
+<div class="card">
+
+<i class="fa-solid fa-circle-check icon"></i>
+
+<h2>Infrastructure Ready</h2>
+
+<p>
+
+AWS infrastructure configured successfully with networking, security, and EC2 instance.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-circle-check icon"></i>
+
+<h2>Automation</h2>
+
+<p>
+
+Bash scripts automate server health checks, Apache monitoring, and website backups.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-circle-check icon"></i>
+
+<h2>Deployment</h2>
+
+<p>
+
+Website deployed successfully using Apache Web Server on Ubuntu Linux.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-circle-check icon"></i>
+
+<h2>Version Control</h2>
+
+<p>
+
+Git repository created with branching, commits, merge operations, and GitHub integration.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- ====================================================== -->
+<!-- FOOTER -->
+<!-- ====================================================== -->
+
+<footer>
+
+<h2 style="margin-bottom:15px;">
+DevOps Fundamentals Project Dashboard
+</h2>
+
+<p>
+
+Designed for AWS • Ubuntu Linux • Apache • Git • GitHub • Bash Automation
+
+</p>
+
+<br>
+
+<p>
+
+© 2026 DevOps Dashboard | Created using HTML, CSS & JavaScript
+
+</p>
+
+</footer>
+<script>
+
+/* =====================================================
+   LIVE CLOCK & AUTOMATIC DATE
+===================================================== */
+
+function updateClock(){
+
+    const now = new Date();
+
+    const hours = String(now.getHours()).padStart(2,'0');
+    const minutes = String(now.getMinutes()).padStart(2,'0');
+    const seconds = String(now.getSeconds()).padStart(2,'0');
+
+    document.getElementById("clock").innerHTML =
+        `${hours}:${minutes}:${seconds}`;
+
+    const options = {
+        weekday:'long',
+        year:'numeric',
+        month:'long',
+        day:'numeric'
+    };
+
+    document.getElementById("date").innerHTML =
+        now.toLocaleDateString('en-US', options);
+
+}
+
+updateClock();
+
+setInterval(updateClock,1000);
+
+/* =====================================================
+   COUNTER ANIMATION
+===================================================== */
+
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter=>{
+
+    counter.innerText="0";
+
+    const updateCounter=()=>{
+
+        const target=+counter.getAttribute("data-target");
+
+        const current=+counter.innerText;
+
+        const increment=Math.ceil(target/100);
+
+        if(current<target){
+
+            counter.innerText=current+increment;
+
+            setTimeout(updateCounter,20);
+
+        }
+
+        else{
+
+            counter.innerText=target;
+
+        }
+
+    }
+
+    updateCounter();
+
+});
+
+/* =====================================================
+   CARD HOVER EFFECT
+===================================================== */
+
+const cards=document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+
+card.addEventListener("mousemove",(e)=>{
+
+const rect=card.getBoundingClientRect();
+
+const x=e.clientX-rect.left;
+const y=e.clientY-rect.top;
+
+card.style.background=
+`radial-gradient(circle at ${x}px ${y}px,
+rgba(255,255,255,.22),
+rgba(255,255,255,.08))`;
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.background="rgba(255,255,255,.10)";
+
+});
+
+});
+
+/* =====================================================
+   SCROLL REVEAL ANIMATION
+===================================================== */
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+},
+{
+threshold:0.2
+});
+
+document.querySelectorAll(".card,.stat").forEach(item=>{
+
+item.style.opacity="0";
+item.style.transform="translateY(60px)";
+item.style.transition="all .8s ease";
+
+observer.observe(item);
+
+});
+
+/* =====================================================
+   PROGRESS BAR ANIMATION
+===================================================== */
+
+const bars=document.querySelectorAll(".bar");
+
+bars.forEach(bar=>{
+
+const width=bar.style.width;
+
+bar.style.width="0";
+
+setTimeout(()=>{
+
+bar.style.transition="2s";
+
+bar.style.width=width;
+
+},500);
+
+});
+
+/* =====================================================
+   HERO TITLE FLOAT EFFECT
+===================================================== */
+
+const title=document.querySelector(".hero-left h1");
+
+let direction=1;
+
+setInterval(()=>{
+
+let current=parseFloat(title.dataset.move||0);
+
+current+=0.4*direction;
+
+if(current>8) direction=-1;
+
+if(current<-8) direction=1;
+
+title.style.transform=`translateY(${current}px)`;
+
+title.dataset.move=current;
+
+},30);
+
+/* =====================================================
+   RANDOM STATUS UPDATE
+===================================================== */
+
+const statusMessages=[
+
+"✔ AWS Infrastructure Running",
+"✔ Apache Service Active",
+"✔ Ubuntu Server Healthy",
+"✔ GitHub Repository Connected",
+"✔ Backup Completed",
+"✔ Logs Successfully Monitored"
+
+];
+
+let i=0;
+
+setInterval(()=>{
+
+document.title=statusMessages[i]+" | DevOps Dashboard";
+
+i++;
+
+if(i>=statusMessages.length){
+
+i=0;
+
+}
+
+},3000);
+
+/* =====================================================
+   SMOOTH SCROLL
+===================================================== */
+
+document.querySelectorAll('a[href="#"]').forEach(link=>{
+
+link.addEventListener("click",(e)=>{
+
+e.preventDefault();
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+});
+
+});
+
+/* =====================================================
+   PAGE LOADER EFFECT
+===================================================== */
+
+window.addEventListener("load",()=>{
+
+document.body.style.opacity="0";
+
+setTimeout(()=>{
+
+document.body.style.transition="opacity 1s";
+
+document.body.style.opacity="1";
+
+},100);
+
+});
+
+/* =====================================================
+   CONSOLE MESSAGE
+===================================================== */
+
+console.log("%cDevOps Fundamentals Dashboard",
+"color:#00ff99;font-size:22px;font-weight:bold;");
+
+console.log("Dashboard Loaded Successfully.");
+
+console.log("Hosted on AWS Ubuntu Server");
+
+</script>
 
 </body>
 
